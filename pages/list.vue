@@ -12,7 +12,7 @@
       <li class="rounded" v-for="(items, index) in listCon" :key="index">
         {{ index + 1 }}. {{ items }}
         <span @click="btnRem(index)">
-          <Icon type="md-close" size="20" />
+          <img src="/close-line.svg" width="20px" alt="" />
         </span>
       </li>
     </ul>
@@ -31,14 +31,21 @@
 export default {
   data() {
     return {
-      listCon: ["hahaha", "hehe"],
+      listCon: [
+        "这里可以创建备忘录，",
+        "是的，是临时的，刷新就没，不保留和窃取你的数据",
+      ],
       message: "",
     };
   },
   methods: {
     btnAdd() {
-      this.listCon.push(this.message);
-      this.message = "";
+      if (this.message != "") {
+        this.listCon.push(this.message);
+        this.message = "";
+      } else {
+        alert("还未填写任务内容");
+      }
     },
     clear() {
       this.listCon = [];
