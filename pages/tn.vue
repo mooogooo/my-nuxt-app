@@ -81,6 +81,7 @@ export default {
   width: 100%;
   @media @max {
     height: 100%;
+    min-height: 100vh;
   }
 }
 
@@ -163,7 +164,6 @@ export default {
     border-radius: 20px;
     @media @max {
       width: 70%;
-
       padding: 1rem;
       margin: 1rem auto 0;
     }
@@ -213,7 +213,9 @@ export default {
       justify-content: center;
       align-items: center;
       border-radius: 16px;
-
+      @media @max {
+        margin: 0 auto;
+      }
       &:hover {
         background-color: #ffffff05;
         cursor: pointer;
