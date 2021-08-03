@@ -32,6 +32,7 @@ export default {
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
+    // '@nuxtjs/color-mode'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
@@ -44,5 +45,6 @@ export default {
   server: {
     port: 8080, // default: 3000
     host: '0.0.0.0' // default: localhost
-  }
+  },
+ 
 }

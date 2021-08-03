@@ -1,39 +1,52 @@
 
 <template>
-  <div class="app-bg">
-    <link
-      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <div class="app">
-      <div class="tit">临时笔记 - Temporary Notes</div>
-      <div class="input-ground">
-        <input
-          type="text"
-          v-model="message"
-          @keyup.enter="btnAdd()"
-          placeholder="请输入"
-        />
-        <div @click="btnAdd" class="btn-add">加一条</div>
+  <div :class="systemColor">
+    <div class="app-bg">
+      <!-- <h1>Color mode: {{ $colorMode.value }}</h1> -->
+      <!-- <select v-model="$colorMode.preference">
+      <option value="system">System</option>
+      <option value="red">red</option>
+    </select> -->
+
+      <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+        rel="stylesheet"
+      />
+      <div class="app">
+        <div class="tit">临时笔记 - Temporary Notes</div>
+        <div class="input-ground">
+          <input
+            type="text"
+            v-model="message"
+            @keyup.enter="btnAdd()"
+            placeholder="请输入"
+          />
+          <div @click="btnAdd" class="btn-add">加一条</div>
+        </div>
+        <ul class="list">
+          <li class="" v-for="(items, index) in listCon" :key="index">
+            <div class="num-index">{{ index + 1 }}.</div>
+            <div class="list-con">{{ items }}</div>
+            <span @click="btnRem(index)">
+              <i class="ri-close-line"></i>
+            </span>
+          </li>
+        </ul>
+        <div class="empty" v-if="listCon.length == 0">
+          <div class="con">没有写</div>
+        </div>
+        <div class="ground3" v-if="listCon.length != 0">
+          <span>笔记数量：{{ listCon.length }} 条</span>
+          <div class="btn-clear" @click="clear()">全部删除</div>
+        </div>
+        <div class="changeColor">
+          <div @click="changeColor01()">system</div>
+          <div @click="changeColor02()">eva</div>
+        </div>
       </div>
-      <ul class="list">
-        <li class="" v-for="(items, index) in listCon" :key="index">
-          <div class="num-index">{{ index + 1 }}.</div>
-          <div class="list-con">{{ items }}</div>
-          <span @click="btnRem(index)">
-            <i class="ri-close-line"></i>
-          </span>
-        </li>
-      </ul>
-      <div class="empty" v-if="listCon.length == 0">
-        <div class="con">没有写</div>
-      </div>
-      <div class="ground3" v-if="listCon.length != 0">
-        <span>笔记数量：{{ listCon.length }} 条</span>
-        <div class="btn-clear" @click="clear()">全部删除</div>
-      </div>
+
+      <div class="by">by mogo</div>
     </div>
-    <div class="by">by mogo</div>
   </div>
 </template>
 
@@ -45,6 +58,7 @@ export default {
   },
   data() {
     return {
+      systemColor: "system-mode",
       listCon: [
         "上面输入，可以创建一条条的笔记。",
         "是的，临时的，不会“保留”任何。",
@@ -67,16 +81,44 @@ export default {
     btnRem(index) {
       this.listCon.splice(index, 1);
     },
+    shuru() {
+      alert("okokok");
+    },
+    changeColor01() {
+      this.systemColor = "system-mode";
+    },
+    changeColor02() {
+      this.systemColor = "eva-mode";
+    },
   },
 };
 </script>
 
 
 <style lang="less" scoped>
+@import "~/assets/less.less";
+
 @max: (max-width: 768px);
+
+body {
+  background-color: #f1e7d0;
+  color: #433422;
+}
+
+.system-mode {
+  .app-bg {
+    background-image: linear-gradient(180deg, #0b0c0d 47.49%, #20487c 147.49%);
+    .app {
+      .tit {
+        color: #fff;
+      }
+    }
+  }
+}
 
 .app-bg {
   background-image: linear-gradient(180deg, #0b0c0d 47.49%, #20487c 147.49%);
+  // background-image: @bbbggg1;
   height: 100vh;
   width: 100%;
   @media @max {
@@ -95,7 +137,6 @@ export default {
   }
 
   .tit {
-    color: #fff;
     font-size: 3rem;
     text-align: center;
     font-weight: bolder;
@@ -203,6 +244,9 @@ export default {
       padding: 0.5rem;
       width: 88%;
       text-align: justify;
+      @media @max {
+        width: 93%;
+      }
     }
 
     span {
@@ -277,6 +321,28 @@ export default {
   opacity: 0.1;
   @media @max {
     position: relative;
+  }
+}
+
+.changeColor {
+  display: flex;
+  margin: 5rem auto 0;
+  justify-content: center;
+
+  div {
+    padding: 1rem;
+    margin: 0 1rem;
+
+    border-radius: 8px;
+    color: #ffffff11;
+    transition: all 300ms;
+
+    &:hover {
+      color: #ffffff33;
+      cursor: pointer;
+      transition: all 300ms;
+      background-color: #00000011;
+    }
   }
 }
 </style>

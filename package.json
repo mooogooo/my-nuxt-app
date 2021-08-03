@@ -14,5 +14,7 @@
     "less-loader": "^7.3.0",
     "nuxt": "^2.15.7"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^2.0.10"
+  }
 }
