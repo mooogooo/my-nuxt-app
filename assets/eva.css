@@ -4,6 +4,9 @@
 .eva-mode .app-bg .app .tit {
   color: #40e450;
 }
+.eva-mode .app-bg .app .tit::after {
+  content: " 🚨";
+}
 .eva-mode .input-ground input {
   background: #000;
   border: 1px solid #20487c00;

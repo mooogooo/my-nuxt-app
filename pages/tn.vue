@@ -110,6 +110,9 @@ body {
     .app {
       .tit {
         color: #fff;
+        &::after {
+          content: " 🗄️";
+        }
       }
     }
   }

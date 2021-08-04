@@ -4,6 +4,9 @@
 .builder-mode .app-bg .app .tit {
   color: #ffd600;
 }
+.builder-mode .app-bg .app .tit::after {
+  content: " 🏗️";
+}
 .builder-mode .input-ground input {
   background: #ffd600;
   border: 1px solid #00000000;
