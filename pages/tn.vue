@@ -2,12 +2,6 @@
 <template>
   <div :class="systemColor">
     <div class="app-bg">
-      <!-- <h1>Color mode: {{ $colorMode.value }}</h1> -->
-      <!-- <select v-model="$colorMode.preference">
-      <option value="system">System</option>
-      <option value="red">red</option>
-    </select> -->
-
       <link
         href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
         rel="stylesheet"
@@ -42,6 +36,7 @@
         <div class="changeColor">
           <div @click="changeColor01()">system</div>
           <div @click="changeColor02()">eva</div>
+          <div @click="changeColor03()">builder 🏗️</div>
         </div>
       </div>
 
@@ -90,13 +85,17 @@ export default {
     changeColor02() {
       this.systemColor = "eva-mode";
     },
+    changeColor03() {
+      this.systemColor = "builder-mode";
+    },
   },
 };
 </script>
 
 
 <style lang="less" scoped>
-@import "~/assets/less.less";
+@import "~/assets/eva.less";
+@import "~/assets/builder.less";
 
 @max: (max-width: 768px);
 
@@ -117,7 +116,7 @@ body {
 }
 
 .app-bg {
-  background-image: linear-gradient(180deg, #0b0c0d 47.49%, #20487c 147.49%);
+  // background-image: linear-gradient(180deg, #0b0c0d 47.49%, #20487c 147.49%);
   // background-image: @bbbggg1;
   height: 100vh;
   width: 100%;

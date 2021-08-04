@@ -1,0 +1,73 @@
+.eva-mode .app-bg {
+  background: linear-gradient(180deg, #260137 0%, #890bc5 100%);
+}
+.eva-mode .app-bg .app .tit {
+  color: #40e450;
+}
+.eva-mode .input-ground input {
+  background: #000;
+  border: 1px solid #20487c00;
+  color: #fff;
+}
+.eva-mode .input-ground input:focus {
+  border: 1px solid #40e450;
+}
+.eva-mode .input-ground input::input-placeholder {
+  color: #a30e0e;
+}
+.eva-mode .input-ground input::-webkit-input-placeholder {
+  color: #a30e0e;
+}
+.eva-mode .input-ground input::-moz-placeholder {
+  color: #a30e0e;
+}
+.eva-mode .input-ground input::-moz-placeholder {
+  color: #a30e0e;
+}
+.eva-mode .input-ground input::-ms-input-placeholder {
+  color: #a30e0e;
+}
+.eva-mode .input-ground .btn-add {
+  background-color: #000;
+  border: 1px solid #40e45000;
+  color: #40e450;
+}
+.eva-mode .input-ground .btn-add:hover {
+  background-color: #000;
+  border: 1px solid #40e450;
+  color: #fff;
+  letter-spacing: 5px;
+}
+.eva-mode .list li {
+  background: #00000088;
+  border: 1px solid #8835af;
+  color: #fff;
+}
+.eva-mode .list li:nth-child(2n) {
+  background: #00000088;
+  border: 1px solid #228a4b;
+}
+.eva-mode .list li span {
+  color: #839dc755;
+}
+.eva-mode .list li span:hover {
+  background-color: #00000050;
+  cursor: pointer;
+  color: #fff;
+}
+.eva-mode .ground3 span {
+  color: #eeeeee55;
+}
+.eva-mode .ground3 .btn-clear {
+  background-color: #33094655;
+  color: #eeeeee55;
+}
+.eva-mode .ground3 .btn-clear:hover {
+  background-color: red;
+  color: #fff;
+}
+.eva-mode .empty .con {
+  color: #a51313;
+  background-color: #00000088;
+  border: 2px dashed #7c202055;
+}

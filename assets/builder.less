@@ -1,0 +1,97 @@
+.builder-mode {
+  .app-bg {
+    background: linear-gradient(180deg, #0458d5 0%, #3651dc 100%);
+
+    .app {
+      .tit {
+        color: #ffd600;
+      }
+    }
+  }
+
+  .input-ground {
+    input {
+      background: #ffd600;
+      border: 1px solid #00000000;
+      color: #333;
+      &:focus {
+        border: 1px solid #000000;
+      }
+    }
+    input::input-placeholder {
+      color: #d8984e;
+    }
+    input::-webkit-input-placeholder {
+      //兼容WebKit browsers（Chrome的内核）
+      color: #d8984e;
+    }
+    input::-moz-placeholder {
+      //Mozilla Firefox 4 to 18
+      color: #d8984e;
+    }
+    input::-moz-placeholder {
+      //Mozilla Firefox 19+
+      color: #d8984e;
+    }
+    input::-ms-input-placeholder {
+      //Internet Explorer 10+
+      color: #d8984e;
+    }
+
+    .btn-add {
+      background-color: #ffd600;
+      border: 1px solid #40e45000;
+      color: #333;
+
+      &:hover {
+        background-color: #ffd600;
+        border: 1px solid #ffd600;
+        color: #333;
+        letter-spacing: 5px;
+      }
+    }
+  }
+
+  .list {
+    li {
+      background: #1b2c67;
+      border: 1px solid #ffd60000;
+      color: #fff;
+      &:nth-child(2n) {
+        background: #04409a;
+        border: 1px solid #ffd60000;
+      }
+      span {
+        color: #839dc755;
+        &:hover {
+          background-color: #00000050;
+          cursor: pointer;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .ground3 {
+    span {
+      color: #eeeeee55;
+    }
+    .btn-clear {
+      background-color: #33094655;
+      color: #eeeeee55;
+
+      &:hover {
+        background-color: red;
+        color: #fff;
+      }
+    }
+  }
+
+  .empty {
+    .con {
+      color: #d8984e;
+      background-color: #00000088;
+      border: 2px dashed #7c202055;
+    }
+  }
+}

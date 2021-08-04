@@ -1,0 +1,73 @@
+.builder-mode .app-bg {
+  background: linear-gradient(180deg, #0458d5 0%, #3651dc 100%);
+}
+.builder-mode .app-bg .app .tit {
+  color: #ffd600;
+}
+.builder-mode .input-ground input {
+  background: #ffd600;
+  border: 1px solid #00000000;
+  color: #333;
+}
+.builder-mode .input-ground input:focus {
+  border: 1px solid #000000;
+}
+.builder-mode .input-ground input::input-placeholder {
+  color: #d8984e;
+}
+.builder-mode .input-ground input::-webkit-input-placeholder {
+  color: #d8984e;
+}
+.builder-mode .input-ground input::-moz-placeholder {
+  color: #d8984e;
+}
+.builder-mode .input-ground input::-moz-placeholder {
+  color: #d8984e;
+}
+.builder-mode .input-ground input::-ms-input-placeholder {
+  color: #d8984e;
+}
+.builder-mode .input-ground .btn-add {
+  background-color: #ffd600;
+  border: 1px solid #40e45000;
+  color: #333;
+}
+.builder-mode .input-ground .btn-add:hover {
+  background-color: #ffd600;
+  border: 1px solid #ffd600;
+  color: #333;
+  letter-spacing: 5px;
+}
+.builder-mode .list li {
+  background: #1b2c67;
+  border: 1px solid #ffd60000;
+  color: #fff;
+}
+.builder-mode .list li:nth-child(2n) {
+  background: #04409a;
+  border: 1px solid #ffd60000;
+}
+.builder-mode .list li span {
+  color: #839dc755;
+}
+.builder-mode .list li span:hover {
+  background-color: #00000050;
+  cursor: pointer;
+  color: #fff;
+}
+.builder-mode .ground3 span {
+  color: #eeeeee55;
+}
+.builder-mode .ground3 .btn-clear {
+  background-color: #33094655;
+  color: #eeeeee55;
+}
+.builder-mode .ground3 .btn-clear:hover {
+  background-color: red;
+  color: #fff;
+}
+.builder-mode .empty .con {
+  color: #d8984e;
+  background-color: #00000088;
+  border: 2px dashed #7c202055;
+}
