@@ -36,7 +36,7 @@
         <div class="changeColor">
           <div @click="changeColor01()">system</div>
           <div @click="changeColor02()">eva</div>
-          <div @click="changeColor03()">builder 🏗️</div>
+          <div @click="changeColor03()">builder</div>
         </div>
       </div>
 
