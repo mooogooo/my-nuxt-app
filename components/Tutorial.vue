@@ -17,6 +17,7 @@
       rel="stylesheet"
     />
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
+      <nuxt-link to="/tn"> <div class="btn">TN</div></nuxt-link>
       <h1>hahhahahahah</h1>
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"
@@ -57,3 +58,11 @@
     </div>
   </div>
 </template>
+
+<style lang="less" scoped>
+.btn {
+  padding: 1rem;
+  background-color: #eee;
+  font-weight: bold;
+}
+</style>

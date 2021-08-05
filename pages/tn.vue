@@ -14,13 +14,15 @@
             v-model="message"
             @keyup.enter="btnAdd()"
             placeholder="请输入"
+            ref="inp"
           />
+
           <div @click="btnAdd" class="btn-add">加一条</div>
         </div>
         <ul class="list">
           <li class="" v-for="(items, index) in listCon" :key="index">
             <div class="num-index">{{ index + 1 }}.</div>
-            <div class="list-con">{{ items }}</div>
+            <p class="list-con">{{ items }}</p>
             <span @click="btnRem(index)">
               <i class="ri-close-line"></i>
             </span>
@@ -60,6 +62,9 @@ export default {
       ],
       message: "",
     };
+  },
+  mounted() {
+    this.$refs.inp.focus();
   },
   methods: {
     btnAdd() {
@@ -111,7 +116,7 @@ body {
       .tit {
         color: #fff;
         &::after {
-          content: " 🗄️";
+          content: " ";
         }
       }
     }
@@ -229,7 +234,7 @@ body {
     padding: 0.5rem;
     margin: 1rem 0;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: flex-start;
     color: #fff;
