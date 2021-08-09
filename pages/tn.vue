@@ -20,7 +20,7 @@
           <div @click="btnAdd" class="btn-add">加一条</div>
         </div>
         <ul class="list">
-          <li class="" v-for="(items, index) in listCon" :key="index">
+          <li class="move_2" v-for="(items, index) in listCon" :key="index">
             <div class="num-index">{{ index + 1 }}.</div>
             <p class="list-con">{{ items }}</p>
             <span @click="btnRem(index)">
@@ -63,6 +63,7 @@ export default {
       message: "",
     };
   },
+
   mounted() {
     this.$refs.inp.focus();
   },
@@ -350,6 +351,16 @@ body {
       transition: all 300ms;
       background-color: #00000011;
     }
+  }
+}
+
+.move_2 {
+  -webkit-animation: move_2 1s;
+}
+@-webkit-keyframes move_2 {
+  0% {
+    -webkit-transform: translateX(200px);
+    opacity: 0;
   }
 }
 </style>
