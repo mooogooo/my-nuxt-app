@@ -18,6 +18,7 @@
     />
     <div class="max-w-4xl mx-auto sm:px-6 lg:px-8">
       <nuxt-link to="/tn"> <div class="btn">TN</div></nuxt-link>
+      <nuxt-link to="/bs"> <div class="btn">BS</div></nuxt-link>
       <h1>hahhahahahah</h1>
       <div class="flex justify-center pt-4 space-x-2">
         <a href="https://github.com/nuxt/nuxt.js" target="_blank"
