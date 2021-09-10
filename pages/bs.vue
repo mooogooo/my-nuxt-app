@@ -44,7 +44,8 @@ h1 {
       margin-left: -2.5rem;
       width: 220px;
       height: 80px;
-      background-color: #00000055;
+ background: rgba(32,189,202,0.33);
+border: 1px solid #00FFC6;
       margin-bottom: 32px;
       border-radius: 1rem;
     }
